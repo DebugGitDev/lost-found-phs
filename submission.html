@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Claim / Inquiry Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1>Item Claim / Inquiry Form</h1>
+            <p>Students can request information about or claim a listed item.</p>
+        </header>
+
+        <main class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="student_name">Student Name<span class="required">*</span></label>
+                    <input type="text" id="student_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="student_email">Student Email<span class="required">*</span></label>
+                    <input type="email" id="student_email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="item_id">Item ID / Description<span class="required">*</span></label>
+                    <input type="text" id="item_id" placeholder="e.g., Item #23 – Red Backpack" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="request_type">Request Type<span class="required">*</span></label>
+                    <select id="request_type" required>
+                        <option value="">-- Please choose an option --</option>
+                        <option value="information">Request more information</option>
+                        <option value="claim">Claim this item as mine</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Additional Details</label>
+                    <textarea id="details" rows="4"
+                              placeholder="Provide any extra information to verify the item or your claim."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
