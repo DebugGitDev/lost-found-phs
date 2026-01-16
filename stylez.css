@@ -16,50 +16,70 @@
 }
 
 body {
-    background-color: var(--background);
+    background: linear-gradient(135deg, #ffffff, #f7f3f3);
     color: var(--text-main);
+    padding: 40px 0;
 }
 
 .page {
-    max-width: 700px;
-    margin: 40px auto;
+    max-width: 750px;
+    margin: auto;
     padding: 20px;
 }
 
 .header {
-    border-bottom: 4px solid var(--primary);
-    padding-bottom: 10px;
-    margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
 }
 
 .header h1 {
     color: var(--primary);
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .header p {
-    font-size: 0.95rem;
-    color: #555555;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.header::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
 
 .form-container {
-    background-color: #ffffff;
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    padding: 20px 18px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px 25px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: var(--primary);
+    letter-spacing: 0.3px;
 }
 
 .required {
@@ -72,12 +92,12 @@ input[type="email"],
 select,
 textarea {
     width: 100%;
-    padding: 8px 10px;
-    border-radius: 4px;
+    padding: 12px 14px;
+    border-radius: 8px;
     border: 1px solid var(--border-light);
-    background-color: var(--input-bg);
-    font-size: 0.95rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    background: var(--input-bg);
+    font-size: 1rem;
+    transition: all 0.25s ease;
 }
 
 input:focus,
@@ -85,32 +105,34 @@ select:focus,
 textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(80, 10, 14, 0.15);
+    box-shadow: 0 0 6px rgba(80, 10, 14, 0.25);
 }
 
 textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 100px;
 }
 
 .submit-btn {
-    background-color: var(--primary);
+    background: var(--primary);
     color: #ffffff;
     border: none;
-    border-radius: 4px;
-    padding: 10px 18px;
-    font-size: 0.95rem;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.15s, transform 0.05s;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .submit-btn:hover {
-    background-color: #3b070a;
+    background: #3b070a;
 }
 
 .submit-btn:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
 }
 
 .messages {
@@ -118,20 +140,20 @@ textarea {
 }
 
 .message {
-    padding: 8px 10px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    margin-bottom: 6px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
 }
 
 .message.success {
-    background-color: #e8f5e9;
+    background: #e8f5e9;
     color: var(--success);
     border: 1px solid #c8e6c9;
 }
 
 .message.error {
-    background-color: #ffebee;
+    background: #ffebee;
     color: var(--error);
     border: 1px solid #ffcdd2;
 }
