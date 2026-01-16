@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Items</title>
+  <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <section class="header">
+        <a href="index.html"><img src="images/logo.png"></a>
+    </section>
+
+  <h1>Admin Panel</h1>
+
+  <div class="form">
+    <input type="text" id="itemName" placeholder="Item name">
+    <label class="file-upload">
+        <input type="file" id="itemImage" accept="image/*" hidden>
+        <span>Select image</span>
+        </label>
+    <button id="addBtn">Add Item</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <script src="page.js"></script>
+</body>
+</html>
